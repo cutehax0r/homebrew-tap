@@ -12,7 +12,6 @@ class ProjAT0010 < Formula
   depends_on "go" => :build
   depends_on "go-md2man" => :build
 
-
   def install
     system "make", "build"
     bin.install "bin/proj"
