@@ -1,18 +1,17 @@
 # typed: true
 
-class Proj < Formula
+class ProjAT0010 < Formula
   desc "Tool for use templates to create and modify programming projects"
   homepage "https://github.com/cutehax0r/proj"
 
   url "https://github.com/cutehax0r/proj/archive/refs/tags/v0.0.10.tar.gz"
   sha256 "0af4eb858c208e0b1c965b74d8e1e05250d77d548a2df7ce14a606a6cf0d6f93"
   license "MIT"
-
+  keg_only :versioned_formula
   depends_on "cmake" => :build
   depends_on "go" => :build
   depends_on "go-md2man" => :build
 
-  conflicts_with "proj", because: "this formula provides a different proj executable"
 
   def install
     system "make", "build"
