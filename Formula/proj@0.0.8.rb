@@ -8,11 +8,11 @@ class ProjAT008 < Formula
   sha256 "bfb384689e2fe16958f428605d1f0d1dd6a8fde843667bddae5ec83f9c5fd19a"
   license "MIT"
 
+  keg_only :versioned_formula
+
   depends_on "cmake" => :build
   depends_on "go" => :build
   depends_on "go-md2man" => :build
-
-  keg_only :versioned_formula
 
   def install
     system "make", "build"
