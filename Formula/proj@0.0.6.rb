@@ -1,4 +1,4 @@
-class Proj < Formula
+class ProjAT006 < Formula
   desc "Tool for use templates to create and modify programming projects"
   homepage "https://github.com/cutehax0r/proj"
 
