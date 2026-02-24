@@ -1,6 +1,6 @@
 # typed: true
 
-class Proj < Formula
+class ProjAT008 < Formula
   desc "Tool for use templates to create and modify programming projects"
   homepage "https://github.com/cutehax0r/proj"
 
@@ -12,7 +12,7 @@ class Proj < Formula
   depends_on "go" => :build
   depends_on "go-md2man" => :build
 
-  conflicts_with "proj", because: "this formula provides a different proj executable"
+  keg_only :versioned_formula
 
   def install
     system "make", "build"
