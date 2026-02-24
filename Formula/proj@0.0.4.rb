@@ -1,3 +1,5 @@
+# typed: true
+
 class ProjAT004 < Formula
   desc "Tool for use templates to create and modify programming projects"
   homepage "https://github.com/cutehax0r/proj"
@@ -6,7 +8,7 @@ class ProjAT004 < Formula
   sha256 "d703ac5efe3d8ae6d223b9331a515924a9d2cf8c3a036da59ba35056c63cf3f2"
   license "MIT"
 
-  conflicts_with "proj", because: "this formula provides a different proj executable"
+  keg_only :versioned_formula
 
   depends_on "cmake" => :build
   depends_on "go" => :build
@@ -17,9 +19,9 @@ class ProjAT004 < Formula
     bin.install "bin/proj"
 
     system "make", "man"
-    man1.install Dir[buildpath/"bin/man/*.1"]
-    man5.install Dir[buildpath/"bin/man/*.5"]
-    man7.install Dir[buildpath/"bin/man/*.7"]
+    man1.install Dir[buildpath / "bin/man/*.1"]
+    man5.install Dir[buildpath / "bin/man/*.5"]
+    man7.install Dir[buildpath / "bin/man/*.7"]
   end
 
   test do

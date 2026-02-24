@@ -1,3 +1,5 @@
+# typed: true
+
 class ProjAT001 < Formula
   desc "Tool for use templates to create and modify programming projects"
   homepage "https://github.com/cutehax0r/proj"
@@ -6,7 +8,7 @@ class ProjAT001 < Formula
   sha256 "39f70572b65ecd73c81a60e02b5fe0067cc55f08cddd5506be23d0127ccad91d"
   license "MIT"
 
-  conflicts_with "proj", because: "this formula provides a different proj executable"
+  keg_only :versioned_formula
 
   depends_on "cmake" => :build
   depends_on "go" => :build
@@ -20,4 +22,3 @@ class ProjAT001 < Formula
     system "#{bin}/proj", "help"
   end
 end
-
